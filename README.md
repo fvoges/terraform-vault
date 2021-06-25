@@ -37,6 +37,6 @@ There are several directories containing Terraform modules and configurations th
 
 `vault-admin` configures the root and `$company` namespaces. `vault-namespace` conmfigures `$env-$app` namespace 
 
-> **NOTE:** The ApprRle auth method, KV secrets engine, and associated policies are not implemented).
+> **NOTE:** The AppRole auth method, KV secrets engine, and associated policies are not implemented).
 
 ![Vault namespaces diagram](assets/vault_namespaces.png)
