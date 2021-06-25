@@ -40,3 +40,5 @@ There are several directories containing Terraform modules and configurations th
 > **NOTE:** The AppRole auth method, KV secrets engine, and associated policies are not implemented).
 
 ![Vault namespaces diagram](assets/vault_namespaces.png)
+
+> **NOTE:** `$env`,  `$app`, and  `$service` represent Terraform variables (e.g., `var.env`) shortened to make the diagram more compact and easier to read.
