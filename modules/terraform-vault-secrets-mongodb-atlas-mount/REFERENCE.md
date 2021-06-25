@@ -1,4 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -10,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 2 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | 2.21.0 |
 
 ## Modules
 
@@ -27,16 +26,15 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_mount_name"></a> [mount\_name](#input\_mount\_name) | n/a | `any` | n/a | yes |
-| <a name="input_mount_path"></a> [mount\_path](#input\_mount\_path) | n/a | `any` | n/a | yes |
-| <a name="input_private_key"></a> [private\_key](#input\_private\_key) | n/a | `any` | n/a | yes |
-| <a name="input_project_id"></a> [project\_id](#input\_project\_id) | n/a | `any` | n/a | yes |
-| <a name="input_public_key"></a> [public\_key](#input\_public\_key) | n/a | `any` | n/a | yes |
-| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | n/a | `any` | n/a | yes |
+| <a name="input_mount_name"></a> [mount\_name](#input\_mount\_name) | MongoDB Atlas secrets engine mount name. | `string` | `"mongodb"` | no |
+| <a name="input_mount_path"></a> [mount\_path](#input\_mount\_path) | MongoDB Atlas secrets engine mount path. | `string` | `"mongodb"` | no |
+| <a name="input_private_key"></a> [private\_key](#input\_private\_key) | Mongodb Atlas API private key. | `string` | n/a | yes |
+| <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Mongodb Atlas project ID. | `string` | n/a | yes |
+| <a name="input_public_key"></a> [public\_key](#input\_public\_key) | Mongodb Atlas API public key. | `string` | n/a | yes |
+| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | Mongodb Atlas role name to create. | `string` | `"mongodb"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_vault_database_secret_backend_connection"></a> [vault\_database\_secret\_backend\_connection](#output\_vault\_database\_secret\_backend\_connection) | n/a |
-<!-- END_TF_DOCS -->

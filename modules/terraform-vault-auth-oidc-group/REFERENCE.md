@@ -1,4 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -10,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 2 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | 2.21.0 |
 
 ## Modules
 
@@ -27,9 +26,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_oidc_auth_backend_accessor"></a> [oidc\_auth\_backend\_accessor](#input\_oidc\_auth\_backend\_accessor) | OIDC auth backend accessor from `vault_jwt_auth_backend` resource | `string` | n/a | yes |
+| <a name="input_oidc_auth_mount_accessor"></a> [oidc\_auth\_mount\_accessor](#input\_oidc\_auth\_mount\_accessor) | OIDC auth backend accessor from `vault_jwt_auth_backend` resource | `string` | n/a | yes |
 | <a name="input_oidc_group_alias_name"></a> [oidc\_group\_alias\_name](#input\_oidc\_group\_alias\_name) | The identifier of the external OIDC group (normally, the group object ID) | `string` | n/a | yes |
-| <a name="input_oidc_group_metadata"></a> [oidc\_group\_metadata](#input\_oidc\_group\_metadata) | Optional map of metadata to assign to the group | `map` | `{}` | no |
+| <a name="input_oidc_group_metadata"></a> [oidc\_group\_metadata](#input\_oidc\_group\_metadata) | Optional map of metadata to assign to the group | `map(any)` | `{}` | no |
 | <a name="input_oidc_group_name"></a> [oidc\_group\_name](#input\_oidc\_group\_name) | Name of the external OIDC group (usually, it matches the name used in the external directory) | `string` | n/a | yes |
 
 ## Outputs
@@ -37,4 +36,3 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_external_group"></a> [external\_group](#output\_external\_group) | External group resource (exposes the generated `vault_identity_group` resource) |
-<!-- END_TF_DOCS -->

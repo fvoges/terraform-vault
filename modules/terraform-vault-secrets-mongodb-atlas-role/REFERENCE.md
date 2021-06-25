@@ -1,4 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -10,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 2 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | 2.21.0 |
 
 ## Modules
 
@@ -28,10 +27,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_creation_statement"></a> [creation\_statement](#input\_creation\_statement) | n/a | `any` | n/a | yes |
-| <a name="input_mount_name"></a> [mount\_name](#input\_mount\_name) | Name for the secrets engine mount | `string` | n/a | yes |
-| <a name="input_mount_path"></a> [mount\_path](#input\_mount\_path) | n/a | `any` | n/a | yes |
-| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | n/a | `any` | n/a | yes |
+| <a name="input_creation_statement"></a> [creation\_statement](#input\_creation\_statement) | MongoDB Atlas secrets engine role creation statement. This defines how to create the user and which permissions it has. Provided by your MongoDB admins. | `list(string)` | n/a | yes |
+| <a name="input_mount_name"></a> [mount\_name](#input\_mount\_name) | MongoDB Atlas secrets engine mount name. | `string` | `"mongodb"` | no |
+| <a name="input_mount_path"></a> [mount\_path](#input\_mount\_path) | MongoDB Atlas secrets engine mount path. | `string` | `"mongodb"` | no |
+| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | Mongodb Atlas role name to create. | `string` | `"mongodb"` | no |
 
 ## Outputs
 
@@ -39,4 +38,3 @@ No modules.
 |------|-------------|
 | <a name="output_policy"></a> [policy](#output\_policy) | n/a |
 | <a name="output_policy_document"></a> [policy\_document](#output\_policy\_document) | n/a |
-<!-- END_TF_DOCS -->

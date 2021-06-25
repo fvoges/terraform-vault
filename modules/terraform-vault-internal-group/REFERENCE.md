@@ -1,4 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -10,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 2 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | 2.21.0 |
 
 ## Modules
 
@@ -21,20 +20,18 @@ No modules.
 | Name | Type |
 |------|------|
 | [vault_identity_group.internal](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/identity_group) | resource |
-| [vault_policy.internal_group](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/policy) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_group_metadata"></a> [group\_metadata](#input\_group\_metadata) | n/a | `any` | n/a | yes |
-| <a name="input_group_name"></a> [group\_name](#input\_group\_name) | n/a | `any` | n/a | yes |
-| <a name="input_member_group_ids"></a> [member\_group\_ids](#input\_member\_group\_ids) | n/a | `any` | n/a | yes |
-| <a name="input_vault_policy_document"></a> [vault\_policy\_document](#input\_vault\_policy\_document) | n/a | `any` | `null` | no |
+| <a name="input_group_metadata"></a> [group\_metadata](#input\_group\_metadata) | Metadata to be added to the internal group (key => value pairs). | `map(any)` | `{}` | no |
+| <a name="input_group_name"></a> [group\_name](#input\_group\_name) | Internal group name. | `string` | n/a | yes |
+| <a name="input_member_group_ids"></a> [member\_group\_ids](#input\_member\_group\_ids) | List of group members. | `list(string)` | n/a | yes |
+| <a name="input_vault_policies"></a> [vault\_policies](#input\_vault\_policies) | List of Vault ACL policies to attach to the group. | `list(any)` | `null` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_internal_group"></a> [internal\_group](#output\_internal\_group) | n/a |
-<!-- END_TF_DOCS -->
+| <a name="output_internal_group"></a> [internal\_group](#output\_internal\_group) | Internal gropup resource. |

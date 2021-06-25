@@ -4,7 +4,7 @@ resource "vault_mount" "mongodb" {
 }
 
 resource "vault_database_secret_backend_connection" "mongodb" {
-  backend       = var.mount_path
+  backend       = vault_mount.mongodb.path
   name          = var.mount_name
   allowed_roles = [var.role_name]
 
@@ -15,3 +15,15 @@ resource "vault_database_secret_backend_connection" "mongodb" {
   }
 }
 
+// data "vault_policy_document" "mongodb_user_policy" {
+//   rule {
+//     description  = "Allow creation of dynamic credentials"
+//     path         = "${var.mount_path}/creds/{{identity.entity.metadata.env}}"
+//     capabilities = ["read"]
+//   }
+// }
+
+// resource "vault_policy" "mongodb_user" {
+//   name   = "mongodb_user_template"
+//   policy = data.vault_policy_document.mongodb_user_policy.hcl
+// }

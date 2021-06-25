@@ -1,10 +1,30 @@
+locals {
+  group_name = replace(lower(var.admins_external_group_name), "/\\W/", "_")
+}
+
+resource "vault_policy" "vault_admins" {
+  name   = "${local.group_name}-group-policy"
+  policy = data.vault_policy_document.vault_admin.hcl
+}
+
 data "vault_policy_document" "vault_admin" {
+  rule {
+    description  = "Read system health check"
+    path         = "${var.top_namespace}/*"
+    capabilities = ["create", "read", "update", "delete", "list"]
+  }
+
   rule {
     description  = "Read system health check"
     path         = "sys/health"
     capabilities = ["read", "sudo"]
   }
 
+  rule {
+    description  = "Create and manage namespaces"
+    path         = "sys/namespaces"
+    capabilities = ["create", "read", "update", "delete", "list"]
+  }
   rule {
     description  = "Create and manage namespaces"
     path         = "sys/namespaces/*"
@@ -60,4 +80,11 @@ data "vault_policy_document" "vault_admin" {
     path         = "sys/mounts"
     capabilities = ["read"]
   }
+
+  rule {
+    description  = "Manage secrets Sentinel policies"
+    path         = "sys/policies/*"
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+  }
+
 }
