@@ -33,7 +33,7 @@ There are several directories containing Terraform modules and configurations th
   - `terraform-vault-secrets-mongodb-atlas-role`
     - configures a MongoDB Atlas secrets engine role associated with a mount
 
-## Vault namespaces diagram
+## Vault namepaces diagram
 
 `vault-admin` configures the root and `$company` namespaces. `vault-namespace` conmfigures `$env-$app` namespace 
 
