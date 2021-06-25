@@ -51,3 +51,4 @@
 | Name | Description |
 |------|-------------|
 | <a name="output_oidc_accessor"></a> [oidc\_accessor](#output\_oidc\_accessor) | OIDC Auth backend mount accessor. |
+| <a name="output_top_namespace"></a> [top\_namespace](#output\_top\_namespace) | Top level namespace. |

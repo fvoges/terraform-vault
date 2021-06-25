@@ -2,7 +2,7 @@
 module "namespace" {
   source = "../../modules/terraform-vault-namespace"
 
-  namespace_path = "nedbank"
+  namespace_path = data.terraform_remote_state.vault_admin.outputs.top_namespace.path
 
   env      = "prod"
   app      = "app_a"
