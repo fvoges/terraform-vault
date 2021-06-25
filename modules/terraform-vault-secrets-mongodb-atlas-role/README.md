@@ -1,3 +1,6 @@
+# terraform-vault-secrets-mongodb-atlas-role
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -38,3 +41,4 @@ No modules.
 |------|-------------|
 | <a name="output_policy"></a> [policy](#output\_policy) | n/a |
 | <a name="output_policy_document"></a> [policy\_document](#output\_policy\_document) | n/a |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

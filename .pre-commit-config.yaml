@@ -3,7 +3,5 @@ repos:
   - repo: git://github.com/antonbabenko/pre-commit-terraform
     rev: v1.50.0
     hooks:
-      # - id: terraform_validate
       - id: terraform_fmt
-      - id: terraform_docs_replace
-        args: ['--dest=REFERENCE.md']
+      - id: terraform_docs

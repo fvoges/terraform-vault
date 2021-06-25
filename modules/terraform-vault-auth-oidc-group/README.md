@@ -1,3 +1,6 @@
+# terraform-vault-auth-oidc-group
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -36,3 +39,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_external_group"></a> [external\_group](#output\_external\_group) | External group resource (exposes the generated `vault_identity_group` resource) |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

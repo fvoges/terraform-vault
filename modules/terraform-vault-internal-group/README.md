@@ -1,3 +1,6 @@
+# terraform-vault-internal-group
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -35,3 +38,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_internal_group"></a> [internal\_group](#output\_internal\_group) | Internal gropup resource. |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

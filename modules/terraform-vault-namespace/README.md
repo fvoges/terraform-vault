@@ -1,3 +1,6 @@
+# terraform-vault-namespace
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -49,3 +52,4 @@
 ## Outputs
 
 No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

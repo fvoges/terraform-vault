@@ -1,3 +1,6 @@
+# terraform-vault-auth-oidc
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -37,3 +40,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_oidc_auth_mount_accessor"></a> [oidc\_auth\_mount\_accessor](#output\_oidc\_auth\_mount\_accessor) | OIDC auth mount accessor |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
