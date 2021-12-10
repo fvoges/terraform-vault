@@ -1,5 +1,6 @@
 locals {
   namespace_name = "${var.env}-${var.app}"
+  role_name      = "${var.env}-${var.app}"
 }
 
 provider "vault" {
@@ -36,7 +37,7 @@ module "mongodb_mount" {
   private_key = var.mongodb_private_key
   project_id  = var.mongodb_project_id
   public_key  = var.mongodb_public_key
-  role_name   = var.env
+  // role_name   = var.env
 
   depends_on = [vault_namespace.default]
 }
@@ -49,9 +50,9 @@ module "mongodb_role" {
   }
 
   creation_statement = var.mongodb_role_creation_statement
-  role_name          = var.env
+  role_name          = local.role_name
 
-  depends_on = [vault_namespace.default, module.mongodb_mount]
+  depends_on = [module.mongodb_mount]
 }
 
 module "mongodb_internal_group" {
@@ -66,5 +67,5 @@ module "mongodb_internal_group" {
   member_group_ids = [module.mongodb_external_group.external_group.id]
   vault_policies   = [module.mongodb_role.policy.name]
 
-  depends_on = [vault_namespace.default, module.mongodb_mount]
+  depends_on = [module.mongodb_mount]
 }
