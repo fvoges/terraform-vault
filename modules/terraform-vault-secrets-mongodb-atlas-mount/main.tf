@@ -6,7 +6,7 @@ resource "vault_mount" "mongodb" {
 resource "vault_database_secret_backend_connection" "mongodb" {
   backend       = vault_mount.mongodb.path
   name          = var.mount_name
-  allowed_roles = [var.role_name]
+  allowed_roles = ["*"]
 
   mongodbatlas {
     public_key  = var.public_key

@@ -34,7 +34,6 @@ No modules.
 | <a name="input_private_key"></a> [private\_key](#input\_private\_key) | Mongodb Atlas API private key. | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Mongodb Atlas project ID. | `string` | n/a | yes |
 | <a name="input_public_key"></a> [public\_key](#input\_public\_key) | Mongodb Atlas API public key. | `string` | n/a | yes |
-| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | Mongodb Atlas role name to create. | `string` | `"mongodb"` | no |
 
 ## Outputs
 

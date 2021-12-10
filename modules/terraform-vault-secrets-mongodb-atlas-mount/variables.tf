@@ -1,8 +1,8 @@
-variable "role_name" {
-  type        = string
-  description = "Mongodb Atlas role name to create."
-  default     = "mongodb"
-}
+// variable "role_name" {
+//   type        = string
+//   description = "Mongodb Atlas role name to create."
+//   default     = "mongodb"
+// }
 variable "mount_path" {
   type        = string
   description = "MongoDB Atlas secrets engine mount path."
