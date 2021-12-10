@@ -1,3 +1,4 @@
+# policy.tf
 locals {
   group_name = replace(lower(var.admins_external_group_name), "/\\W/", "_")
 }
@@ -87,4 +88,9 @@ data "vault_policy_document" "vault_admin" {
     capabilities = ["create", "read", "update", "delete", "list", "sudo"]
   }
 
+  rule {
+    description  = "Manage Replication"
+    path         = "sys/replication/*"
+    capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+  }
 }

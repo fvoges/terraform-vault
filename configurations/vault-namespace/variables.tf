@@ -1,3 +1,4 @@
+
 variable "mongodb_public_key" {
   type        = string
   description = "Mongodb Atlas API public key."
