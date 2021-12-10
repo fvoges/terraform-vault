@@ -1,3 +1,8 @@
+variable "hcp_vault" {
+  type        = bool
+  description = "Set to `true` if using HCP Vault."
+  default     = false
+}
 variable "admins_internal_group_metadata" {
   type        = map(any)
   description = "Metadata to be added to the internal group (key => value pairs)."
@@ -49,5 +54,5 @@ variable "vault_audit_log_file_path" {
 }
 variable "top_namespace" {
   type        = string
-  description = "name of the top-level namespace. All your child namespaced should be created under this one."
+  description = "name of the top-level namespace. All your child namespace should be created under this one."
 }
