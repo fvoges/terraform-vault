@@ -33,6 +33,7 @@ No modules.
 | <a name="input_oidc_client_secret"></a> [oidc\_client\_secret](#input\_oidc\_client\_secret) | OIDC Client secret. | `string` | n/a | yes |
 | <a name="input_oidc_description"></a> [oidc\_description](#input\_oidc\_description) | Description for the OIDC Auth backend. | `string` | `"OIDC external directory"` | no |
 | <a name="input_oidc_discovery_url"></a> [oidc\_discovery\_url](#input\_oidc\_discovery\_url) | Discovery URL for the OIDC Auth backend (see Vault's documentation). | `string` | n/a | yes |
+| <a name="input_oidc_verbose_log"></a> [oidc\_verbose\_log](#input\_oidc\_verbose\_log) | Turn `verbose_oidc_logging` on for the OIDC role. WARNING: this requires debug logging turned on on the Vault cluster to show the JWT token returned by the OIDC provider. This info shows up in the application log (i.e., syslog), not audit log. | `bool` | `false` | no |
 | <a name="input_vault_hostname"></a> [vault\_hostname](#input\_vault\_hostname) | DNS name of the Vault cluster. | `string` | n/a | yes |
 
 ## Outputs

@@ -26,5 +26,6 @@ resource "vault_jwt_auth_backend_role" "default" {
   role_type             = "oidc"
   allowed_redirect_uris = ["http://localhost:8250/oidc/callback", "http://${var.vault_hostname}:8200/ui/vault/auth/oidc/oidc/callback"]
   oidc_scopes           = ["https://graph.microsoft.com/.default"]
+  verbose_oidc_logging  = var.oidc_verbose_log
 }
 

@@ -20,3 +20,8 @@ variable "vault_hostname" {
   type        = string
   description = "DNS name of the Vault cluster."
 }
+variable "oidc_verbose_log" {
+  type        = bool
+  description = "Turn `verbose_oidc_logging` on for the OIDC role. WARNING: this requires debug logging turned on on the Vault cluster to show the JWT token returned by the OIDC provider. This info shows up in the application log (i.e., syslog), not audit log."
+  default     = false
+}
