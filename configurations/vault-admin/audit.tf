@@ -1,3 +1,4 @@
+
 resource "vault_audit" "file" {
   type = "file"
 
@@ -10,4 +11,3 @@ resource "vault_audit" "syslog" {
   type    = "syslog"
   options = {}
 }
-
